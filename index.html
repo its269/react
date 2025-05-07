@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Install Vite + React + Router</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .step {
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      margin-top: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Install Vite + React + React Router</h1>
+
+  <div class="step">
+    <h2>Step 1: Create Vite Project</h2>
+    <pre id="step1">npm create vite@latest my-app -- --template react</pre>
+    <button onclick="copyText('step1')">Copy</button>
+  </div>
+
+  <div class="step">
+    <h2>Step 2: Navigate to Project Folder</h2>
+    <pre id="step2">cd my-app</pre>
+    <button onclick="copyText('step2')">Copy</button>
+  </div>
+
+  <div class="step">
+    <h2>Step 3: Install Dependencies</h2>
+    <pre id="step3">npm install</pre>
+    <button onclick="copyText('step3')">Copy</button>
+  </div>
+
+  <div class="step">
+    <h2>Step 4: Install React Router</h2>
+    <pre id="step4">npm install react-router-dom</pre>
+    <button onclick="copyText('step4')">Copy</button>
+  </div>
+
+  <div class="step">
+    <h2>Step 5: Run Development Server</h2>
+    <pre id="step5">npm run dev</pre>
+    <button onclick="copyText('step5')">Copy</button>
+  </div>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text)
+        .then(() => alert("Copied to clipboard!"))
+        .catch(() => alert("Failed to copy."));
+    }
+  </script>
+</body>
+</html>
